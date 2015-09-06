@@ -19,11 +19,19 @@
                 $("#shop_title").text("Tienda");
                 $("#blog_hyperlink").prop("href", "http://blog.pehebe.com/?lang=es");
                 $("#blog_title").text("Blog");
+                $("#activities_hyperlink").prop("href", "http://blog.pehebe.com/?lang=es");
+                $("#activities_title").text("Actividades");
+                $("#aboutme_hyperlink").prop("href", "http://blog.pehebe.com/?lang=es");
+                $("#aboutme_title").text("Sobre mí");
             } else {
                 $("#shop_hyperlink").prop("href", "https://shop.pehebe.com/?language=en");
                 $("#shop_title").text("Shop");
                 $("#blog_hyperlink").prop("href", "http://blog.pehebe.com/?lang=en");
                 $("#blog_title").text("Blog");
+                $("#activities_hyperlink").prop("href", "http://blog.pehebe.com/?lang=en");
+                $("#activities_title").text("Activities");
+                $("#aboutme_hyperlink").prop("href", "http://blog.pehebe.com/?lang=en");
+                $("#aboutme_title").text("About me");
             }
         });
         </script>
@@ -31,6 +39,9 @@
     <body>
         <div data-role="page" data-theme="a" id="pehebe-root" class="my-page" data-url="index.html" >
             <div role="main" class="ui-content">
+                <div data-role="header">
+                    <h1></h1>
+                </div><!-- /header -->
                 <ul data-role="listview" data-inset="true">
                     <li><a id="shop_hyperlink" href="https://shop.pehebe.com">
                         <img src="static/img/shop.png" class="ui-li-has-thumb">
@@ -39,6 +50,10 @@
                     <li><a id="blog_hyperlink" href="http://blog.pehebe.com">
                         <img src="static/img/blog.png" class="ui-li-has-thumb">
                         <h2 id="blog_title">Blog</h2>
+                    </a></li>
+                    <li><a id="activities_hyperlink" href="http://blog.pehebe.com">
+                        <img src="static/img/activities.png" class="ui-li-has-thumb">
+                        <h2 id="activities_title">Activities</h2>
                     </a></li>
                     <li><a href="https://www.facebook.com/pages/La-Eterna-Ni%C3%B1a-Pehebe/277945235602199?sk=timeline">
                         <img src="static/img/facebook.png" class="ui-li-has-thumb">
@@ -51,6 +66,10 @@
                     <li><a href="https://twitter.com/pehebeen">
                         <img src="static/img/twitter.png" class="ui-li-has-thumb">
                         <h2>Twitter</h2>
+                    </a></li>
+                    <li><a id="aboutme_hyperlink" href="http://blog.pehebe.com">
+                        <img src="static/img/me.png" class="ui-li-has-thumb">
+                        <h2 id="aboutme_tittle">About me</h2>
                     </a></li>
                 </ul>
             </div><!-- /content -->

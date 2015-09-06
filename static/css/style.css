@@ -1,20 +1,41 @@
 /* A bit custom styling */
-.my-page {
-    background: #d6b1dd;
-    height: 100%;
-}
 .my-page .ui-content {
     padding: .5625em; /* 9px */
-    background: #d6b1dd;
-    min-height: 100%;
 }
+
+.my-page .ui-header .ui-title, .ui-footer .ui-title {
+    background: url('../img/header.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center center;
+    background-color: #f9f9f9;
+    margin: 0 0;
+    padding: .7em 0;
+}
+
+.my-page .ui-bar-a, {
+    border-color: #f9f9f9;
+}
+
 .my-page .ui-listview li .ui-btn .ui-li-aside {
     color: #eee;
+}
+@media ( max-width: 48em ) {
+    .my-page .ui-content {
+        padding: .5625em; /* 9px */
+    }
+    .my-page .ui-header .ui-title, .ui-footer .ui-title {
+        min-height: 6em;
+    }
 }
 /* First breakpoint is 48em (768px). 3 column layout. Tiles 250x250 pixels incl. margin at the breakpoint. */
 @media ( min-width: 48em ) {
     .my-page .ui-content {
         padding: .5625em; /* 9px */
+    }
+    .my-page .ui-header .ui-title, .ui-footer .ui-title {
+        min-height: 10em;
     }
     .my-page .ui-listview li {
         float: left;
@@ -72,14 +93,14 @@
         bottom: 0;
     }
     /* Semi transparent background and different position if there is a thumb. The button has overflow hidden so we don't need to set border-radius. */
-    .ui-listview .ui-li-has-thumb h2,
-    .ui-listview .ui-li-has-thumb p {
+    .my-page .ui-listview .ui-li-has-thumb h2,
+    .my-page .ui-listview .ui-li-has-thumb p {
         background: rgba(154, 76, 178, 0.87);
     }
-    .ui-listview .ui-li-has-thumb h2 {
+    .my-page .ui-listview .ui-li-has-thumb h2 {
         bottom: 05%;
     }
-    .ui-listview .ui-li-has-thumb p {
+    .my-page .ui-listview .ui-li-has-thumb p {
         min-height: 45%;
     }
     /* ui-li-aside has class .ui-li-desc as well so we have to override some things. */
@@ -127,18 +148,28 @@
     .my-page .ui-content {
         padding: .625em; /* 10px */
     }
+    .my-page .ui-header .ui-title, .ui-footer .ui-title {
+        min-height: 10em;
+    }
     /* Set a max-width for the last breakpoint to prevent too much stretching on large screens.
     By setting the max-width equal to the breakpoint width minus padding we keep square tiles. */
     .my-page .ui-listview {
         max-width: 62.5em; /* 1000px */
         margin: 0 auto;
     }
+
     /* Because of the 1000px max-width the width will always be 230px (and margin left/right 10px),
     but we stick to percentage values for demo purposes. */
     .my-page .ui-listview li {
         width: 23%;
         height: 230px;
         margin: .625em 1%;
+    }
+
+    .my-page .ui-listview .ui-li-has-thumb > .ui-btn >img {
+        height: auto; /* To keep aspect ratio. */
+        max-width: 100% !important;
+        max-height: none !important;
     }
 }
 /* For this demo we used images with a size of 310x310 pixels. Just before the second breakpoint the images reach their max width: 1019px - 2 x 9px padding = 1001px x 30.9333% = ~310px */
