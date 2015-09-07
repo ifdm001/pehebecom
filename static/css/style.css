@@ -1,6 +1,7 @@
 /* A bit custom styling */
 .my-page .ui-content {
     padding: .5625em; /* 9px */
+    background-color: #d3c0e2;
 }
 
 .my-page .ui-header .ui-title, .ui-footer .ui-title {
@@ -9,9 +10,14 @@
     background-repeat: no-repeat;
     width: 100%;
     background-position: center center;
-    background-color: #f9f9f9;
+    background-color: #d3c0e2;
     margin: 0 0;
     padding: .7em 0;
+    border: none !important; 
+}
+
+.my-page .ui-content .ui-header {
+     border-color: #d3c0e2;
 }
 
 .my-page .ui-bar-a, {
